@@ -6,7 +6,7 @@
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 20:05:53 by akivam            #+#    #+#             */
-/*   Updated: 2025/05/31 12:05:07 by akivam           ###   ########.fr       */
+/*   Updated: 2025/05/31 18:10:16 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		ft_tolower(int c);
 char	*ft_strch(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-void	*ft_memchr(const void *s1, const void *s2, size_t n);
+void	*ft_memchr(const void *s1, int c, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(char *nptr);
 void	ft_calloc(size_t nmemb, size_t size);

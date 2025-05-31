@@ -18,9 +18,9 @@
 
 # .PHONY: all, clean,fclean,re
 
-NAME= libft
+NAME= libft.a
 
-SRC= ft_atoi.c
+# SRC= .c
 
 # BONUS_SRC=
 
@@ -36,7 +36,7 @@ CC= cc -Wall -Wextra -Werror
 
 $(NAME): $(OBJECT_FILE)
 	 	ar -rc $(NAME) $(OBJECT_FILE)
-
+	@echo denemme
 # bonus: $(BONUS_OBJECT_FILE)
 # 	ar -r $(NAME) $^
 
