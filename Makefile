@@ -1,26 +1,6 @@
-# NAME= libft
-
-# # SRC= buraya C dosyaları gelecek
-
-# # SRC_BONUS= buraya bonustaki c dosyaları gelecek
-
-# OBJECT: %.o : %.c # dosyaları objecte çevirecek
-# 	${SRC} ${}
-# CC= cc -Wall -Wextra _werror # compile için değişkene
-
-# all: # c dosyaları burada o dosyalarına bakılacak ve ar kısmı eklenecek # ar -rc libname -l kod_dosyası/dosyaları.c
-# 	${CC} - c
-# clean:# c dosyaları harici oluşturdu dosyaları silecek
-# 	rm -rf ${all}
-# # fclean: #clean ile aynı işlem
-
-# # re: # clean yada f clean işlemini yapıp geri make yapıcak
-
-# .PHONY: all, clean,fclean,re
-
 NAME= libft.a
 
-# SRC= .c
+# SRC=  \.c
 
 # BONUS_SRC=
 
