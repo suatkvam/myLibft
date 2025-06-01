@@ -1,15 +1,28 @@
-#include"libft.h"
-#include<bsd/string.h>
-#include<stdio.h>
-char *ft_strnstr(const char *big, const char *little, size_t len)
-{
-	char* str = (char*) big;
-	char* to_find = (char*) little;
-	size_t i;
-	size_t j;
-	i = 0;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/01 09:53:59 by akivam            #+#    #+#             */
+/*   Updated: 2025/06/01 09:56:49 by akivam           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-	if(to_find[0] == '\0')
+#include"libft.h"
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
+{
+	char	*str;
+	char	*to_find;
+	size_t	i;
+	size_t	j;
+
+	str = (char *) big;
+	to_find = (char *) little;
+	i = 0;
+	if (to_find[0] == '\0')
 		return (str);
 	while (str[i] != '\0')
 	{
@@ -17,21 +30,10 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 		while (str[i + j] == to_find[j] && j <= len)
 		{
 			if (to_find[j + 1] == '\0')
-				return(&str[i]);
-			j++;
+				return (&str[i]);
+			j = j + 1;
 		}
-		i++;
+		i = i + 1;
 	}	
-	return 0;
-
-}
-
-int main(int argc, char const *argv[])
-{	
-	char str[] = "merhaba, dünya";
-	char find[] = "h";
-	printf("%s",strnstr(str,find,4));
-	printf("\n");
-	printf("%s",ft_strnstr(str,find,4));
-	return 0;
+	return (0);
 }
