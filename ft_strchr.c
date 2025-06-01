@@ -1,25 +1,29 @@
-#include"libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/01 09:27:47 by akivam            #+#    #+#             */
+/*   Updated: 2025/06/01 09:27:56 by akivam           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include"libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
-	char *str = (char *)s;
-	size_t i;
-	i = 0;
+	char	*str;
+	size_t	i;
 
-	while(str[i])
+	*str = (char *)s;
+	i = 0;
+	while (str[i])
 	{
-		if(str[i] == c)
-		return(str + i);
+		if (str[i] == c)
+			return (str + i);
 		i++;
 	}
-	return NULL;
-}
-
-int main(int argc, char const *argv[])
-{
-	char *a = "merhaba dünya";
-	char b = 'd';
-	printf("%s",ft_strchr(a,b));
-	return 0;
+	return (NULL);
 }
