@@ -1,6 +1,16 @@
-#include "libft.h"
-#include<stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/01 08:55:35 by akivam            #+#    #+#             */
+/*   Updated: 2025/06/01 09:07:08 by akivam           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -9,22 +19,12 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*tmp_dst;
 
 	i = 0;
-	tmp_src = (unsigned char*)src;
+	tmp_src = (unsigned char *) src;
 	tmp_dst = dest;
-	while(i < n)
+	while (i < n)
 	{
 		tmp_dst[i] = tmp_src[i];
 		i++;
 	}
 	return (dest);
-
 }
-// int main(int argc, char const *argv[])
-// {
-// 	char src[] = "Hello, world!!!!"; 
-// 	char dest[] = "dünya";
-// 	// ft_memcpy(dest,src,10);
-// 	printf("%s",dest);
-	
-// 	return 0;
-// }
