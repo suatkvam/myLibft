@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isacii.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/28 09:53:24 by akivam            #+#    #+#             */
-/*   Updated: 2025/05/28 09:55:50 by akivam           ###   ########.fr       */
+/*   Created: 2025/06/01 08:49:17 by akivam            #+#    #+#             */
+/*   Updated: 2025/06/01 08:54:13 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-#include<stdio.h>
-/* This function checks whether the given value is a 7-bit */
-/*ASCII character (0 to 127). */
-int	ft_isascii(int c)
+
+void	*ft_memchr(const void *s1, int c, size_t n)
 {
-	if (c >= 0 || c <= 127)
-		return (1);
-	return (0);
+	size_t			i;
+	unsigned char	*str;
+
+	str = (unsigned char *) s1;
+	while (str[i])
+	{
+		if (str[i] == c && i < n)
+			return (str + i);
+		i++;
+	}
+	return (NULL);
 }
-// int main(int argc, char const *argv[])
-// {
-// 	printf("%d",ft_isascii(128));
-// 	return 0;
-// }
