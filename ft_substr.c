@@ -23,19 +23,20 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if(!temp)
 		return NULL;
 
-		ft_memcpy(temp,s + start,len);
+	ft_memcpy(temp,s + start,len);
 	temp[len] = '\0';
 	return (temp);
 }
 
 
-int main(int argc, char const *argv[])
+/* int main(int argc, char const *argv[])
 {
 	char *str = "Merhaba dunya";
-	unsigned int start = 0;
-	size_t len = 7;
+	unsigned int start = 8;
+	size_t len = 3;
 	
 	printf("%s",ft_substr(str,start,len));
 
 	return 0;
 }
+ */

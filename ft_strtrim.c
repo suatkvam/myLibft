@@ -3,7 +3,7 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t i;
-	int end;
+	size_t end;
 	char * trimmed;
 	end = ft_strlen(s1);
 	i = 0;
@@ -23,10 +23,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trimmed[end - i] = '\0';
 	return (trimmed);
 }
-
+/* 
 int main(int argc, char const *argv[])
 {
 	char* s1 = "1   abc   merhaba   ";
 	printf("%s",ft_strtrim(s1," "));
 	return 0;
 }
+ */

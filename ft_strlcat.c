@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcat.c                                          :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 15:49:01 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/01 15:50:12 by akivam           ###   ########.fr       */
+/*   Updated: 2025/06/03 16:18:24 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	int		src_len;
-	int		dst_len;
+	size_t		src_len;
+	size_t		dst_len;
 
 	i = 0;
 	src_len = ft_strlen(src);
