@@ -3,8 +3,6 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *str;
-	str = (char*) s;
 	char *temp;
 	size_t s_len;
 
