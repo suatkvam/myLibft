@@ -37,35 +37,64 @@ static void ft_split_free(char **split)
 	}
 	free(split);
 }
+/* 
 char	**ft_split(char const *s, char c)
 {
 	char **temp;
-	int split_index;
-	int string_index;
+	int i; // split index
+	int j; //string index
 	int word_len;
-	split_index = 0;
-	string_index = 0;
-	word_len = 0;
-	int count_word_len = ft_count_word(s,c);	
-	temp = malloc(sizeof(char*) * (count_word_len + 1));
-	if (!temp)
-		return NULL;
-	while (s[split_index] != '\0')
-	{
-		while (s[split_index] == c)
-			split_index = split_index + 1;
-		if(s[split_index] == '\0')
-			break;
-		word_len = ft_get_word_len(s + split_index,c);
-		temp[string_index] = ft_substr(s,split_index,word_len);
-		if(!temp[string_index])
+
+	i = 0;
+	j = 0;
+	if(!s) return(NULL);
+	temp = malloc(sizeof(char*) * (ft_count_word(s,c) + 1));
+	if (!temp) return NULL;
+	while (s[i] && j < ft_count_word(s,c))
+	{	
+		while (s[i] == c) i = i + 1;
+		if(s[i] == '\0') break;
+		word_len = ft_get_word_len(s + i,c);
+		temp[j] = ft_substr(s,i,word_len);
+		if(!temp[j])
 			{
 				ft_split_free(temp);
 				return NULL;	
 			}
-		string_index = string_index + 1;
-		split_index = split_index + word_len;
+		j = j + 1;
+		i = i + word_len;
 	}
-	temp[string_index] = NULL;
+	temp[j] = NULL;
 	return temp;
 }
+ */
+char	**ft_split(char const *s, char c)
+{
+	char **res;
+	int i; // split_index
+	int j; // string index
+	int word_len;
+	i = 0;
+	j = 0;
+	word_len = 0;
+	res = malloc(sizeof(char*) * (ft_count_word(s,c) + 1));
+	if (!res)
+		return NULL;
+	while (s[i] && j < ft_count_word(s,c))
+	{	
+		while (s[i++] == c)
+		if(s[i] == '\0')
+			break;
+		word_len = ft_get_word_len(s + i,c);
+		res[j++] = ft_substr(s,i,word_len);
+		if(!res[j])
+		{
+			ft_split_free(res);
+			return NULL;	
+		}
+		i = i + word_len;
+	}
+	res[j] = NULL;
+	return res;
+}
+// 
