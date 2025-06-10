@@ -3,14 +3,14 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t i;
-	int end;
+	size_t end;
 	char * trimmed;
 	end = ft_strlen(s1);
 	i = 0;
 	if(!s1)
 		return (NULL);
 	if(!set)
-		return ft_strdup("");
+		return ft_strdup(s1);
 
 	while (s1[i] && ft_strchr(set,s1[i]))
 		i = i + 1;
@@ -22,11 +22,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_memcpy(trimmed,s1 + i,end - i);
 	trimmed[end - i] = '\0';
 	return (trimmed);
-}
-
-int main(int argc, char const *argv[])
-{
-	char* s1 = "1   abc   merhaba   ";
-	printf("%s",ft_strtrim(s1," "));
-	return 0;
 }

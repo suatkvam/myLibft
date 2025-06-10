@@ -6,7 +6,7 @@
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 09:59:45 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/01 10:00:20 by akivam           ###   ########.fr       */
+/*   Updated: 2025/06/10 09:44:29 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	while (str[i] != '\0')
 		i = i + 1;
-	while (str[--i])
+	if((char)c == '\0')
+		return (str + i);
+	while (i-- > 0)
 	{
-		if (str[i] == c)
-		{
+		if (str[i] == (char)c)
 			return (str + i);
-		}
 	}
-	return (0);
+	return (NULL);
 }
