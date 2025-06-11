@@ -6,7 +6,7 @@
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 21:33:18 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/11 13:17:50 by akivam           ###   ########.fr       */
+/*   Updated: 2025/06/11 14:43:07 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ int	ft_atoi(char *nptr)
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		num = (num * 10) + (nptr[i] - '0');
-		if(sign == 1 && num > 2147483647)
+		if (sign == 1 && num > 2147483647)
 			return (-1);
-		if(sign == -1 && num > -2147483648)
+		if (sign == -1 && num > -2147483648)
 			return (0);
 		i++;
 	}

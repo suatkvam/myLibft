@@ -6,7 +6,7 @@
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 15:49:01 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/10 09:45:41 by akivam           ###   ########.fr       */
+/*   Updated: 2025/06/11 14:54:10 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t		src_len;
-	size_t		dst_len;
+	size_t	src_len;
+	size_t	dst_len;
 
 	i = 0;
 	src_len = ft_strlen(src);

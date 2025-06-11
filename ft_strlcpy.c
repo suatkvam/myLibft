@@ -6,7 +6,7 @@
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 12:19:11 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/10 14:54:19 by akivam           ###   ########.fr       */
+/*   Updated: 2025/06/11 14:55:19 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	while (src[i])
 		i = i + 1;
 	return (i);
-}
-#include<bsd/stdlib.h>
-
-int main(int argc, char const *argv[])
-{
-	
-	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/29 11:58:06 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/10 09:49:01 by akivam           ###   ########.fr       */
+/*   Updated: 2025/06/11 14:49:21 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	tmp_src = (unsigned char *) src;
 	tmp_dst = (unsigned char *) dest;
 	if (n == 0 || tmp_src == tmp_dst)
-	return (dest);
+		return (dest);
 	if (tmp_src > tmp_dst)
 	{
 		i = 0;
@@ -30,7 +30,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			tmp_dst[i] = tmp_src[i];
 			i++;
 		}
-
 	}
 	else
 	{	
