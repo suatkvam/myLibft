@@ -19,8 +19,8 @@ OBJECT_FILE= $(SRC:.c=.o)
 CC= cc
 CFLAGS = -Wall -Wextra -Werror
 
-%%.o: %.c
-	${CC} -c $< -o $@
+%.o: %.c
+	${CC} ${CFLAGS} -c $< -o $@
 
 all: $(NAME)
 

@@ -6,26 +6,25 @@
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 08:55:35 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/10 09:49:12 by akivam           ###   ########.fr       */
+/*   Updated: 2025/06/10 13:25:22 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char	*str1;
-	unsigned char	*str2;
 	size_t			i;
+	unsigned char	*tmp_src;
+	unsigned char	*tmp_dst;
 
-	str1 = (unsigned char *) s1;
-	str2 = (unsigned char *) s2;
 	i = 0;
+	tmp_src = (unsigned char *) src;
+	tmp_dst = dest;
 	while (i < n)
 	{
-		if (str1[i] != str2[i])
-			return (str1[i] - str2[i]);
+		tmp_dst[i] = tmp_src[i];
 		i++;
 	}
-	return (0);
+	return (dest);
 }

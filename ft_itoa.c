@@ -1,5 +1,5 @@
 #include"libft.h"
-
+#include<bsd/stdlib.h>
 static int	ft_numberlen(int n)
 {
 	int	len;
@@ -19,7 +19,8 @@ static int	ft_numberlen(int n)
 char	*ft_itoa(int n)
 {
 	int len = ft_numberlen(n);
-	char *str = malloc(len + 1);
+	char *str;
+	str = malloc(len + 1);
 	long number = n;
 
 	if(!str)
@@ -39,4 +40,9 @@ char	*ft_itoa(int n)
 		number = number / 10;
 	}
 	return (str);
+}
+int main(int argc, char const *argv[])
+{
+
+	return 0;
 }

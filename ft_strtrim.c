@@ -23,3 +23,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trimmed[end - i] = '\0';
 	return (trimmed);
 }
+
+int main(int argc, char const *argv[])
+{
+	char str[] = "a fark etmez, ama fark etmez vurun beni a";
+	char *set = "a";
+
+	printf("%s",ft_strtrim(str,set));
+	return 0;
+}
