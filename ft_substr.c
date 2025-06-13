@@ -6,12 +6,11 @@
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 15:35:24 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/11 15:38:47 by akivam           ###   ########.fr       */
+/*   Updated: 2025/06/13 10:24:00 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-#include<stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

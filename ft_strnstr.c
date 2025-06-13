@@ -6,7 +6,7 @@
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 09:53:59 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/01 09:56:49 by akivam           ###   ########.fr       */
+/*   Updated: 2025/06/13 18:58:41 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	i = 0;
 	if (to_find[0] == '\0')
 		return (str);
-	while (str[i] != '\0')
+	while (str[i] != '\0' && i < len)
 	{
 		j = 0;
-		while (str[i + j] == to_find[j] && j <= len)
+		while (str[i + j] == to_find[j] && i + j < len)
 		{
 			if (to_find[j + 1] == '\0')
 				return (&str[i]);

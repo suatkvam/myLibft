@@ -6,16 +6,11 @@
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 15:55:22 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/11 15:58:51 by akivam           ###   ########.fr       */
+/*   Updated: 2025/06/13 10:21:33 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-
-static void	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-}
 
 void	ft_putnbr_fd(int n, int fd)
 {

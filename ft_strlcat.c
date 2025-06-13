@@ -6,7 +6,7 @@
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 15:49:01 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/11 14:54:10 by akivam           ###   ########.fr       */
+/*   Updated: 2025/06/13 17:24:10 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	src_len = ft_strlen(src);
 	dst_len = ft_strlen(dst);
 	if (size <= dst_len)
-		return (dst_len + src_len);
+		return (size + src_len);
 	while ((src[i] != '\0') && (dst_len + i + 1) < size)
 	{
 		dst[dst_len + i] = src[i];

@@ -1,11 +1,15 @@
 NAME= libft.a
 
-SRC=   ft_isascii.c ft_memcpy.c  ft_strjoin.c ft_strrchr.c \
-		ft_atoi.c  ft_isdigit.c ft_memmove.c ft_strlcat.c ft_strtrim.c \
-		ft_bzero.c ft_isprint.c ft_memset.c  ft_strlcpy.c ft_substr.c \
-		ft_calloc.c  ft_itoa.c  ft_split.c ft_strlen.c  ft_tolower.c \
-		ft_isalnum.c ft_memchr.c  ft_strchr.c  ft_strncmp.c ft_toupper.c \
-		ft_isalpha.c ft_memcmp.c  ft_strdup.c  ft_strnstr.c
+SRC=	ft_atoi.c     ft_bzero.c     ft_calloc.c    ft_calloc.o    ft_isalnum.c \
+		ft_isalpha.c  ft_isascii.c   ft_isascii.o   ft_isdigit.c   ft_isprint.c \
+		ft_itoa.c     ft_memchr.c    ft_memchr.o    ft_memcmp.c    ft_memcmp.o \
+		ft_memcpy.c   ft_memcpy.o    ft_memmove.c   ft_memset.c    ft_putchar_fd.c \
+		ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_split.c   ft_strchr.c \
+		ft_strchr.o   ft_strdup.c    ft_striteri.c  ft_strjoin.c   ft_strlcat.c \
+		ft_strlcat.o  ft_strlcpy.c   ft_strlcpy.o   ft_strlen.c    ft_strmapi.c \
+		ft_strncmp.c  ft_strncmp.o   ft_strnstr.c   ft_strrchr.c   ft_strrchr.o \
+		ft_strtrim.c  ft_substr.c    ft_tolower.c   ft_toupper.c
+
 
 # BONUS_SRC=
 
@@ -19,8 +23,6 @@ OBJECT_FILE= $(SRC:.c=.o)
 CC= cc
 CFLAGS = -Wall -Wextra -Werror
 
-%.o: %.c
-	${CC} ${CFLAGS} -c $< -o $@
 
 all: $(NAME)
 
@@ -29,9 +31,9 @@ $(NAME): $(OBJECT_FILE)
 	@echo "derleme tamamlandi"
 
 clean:
-	rm -f $(OBJECT_FILE) $(BONUS_OBJECT_FILE)
+	rm -f $(OBJECT_FILE)
 
-fclean:
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean $(NAME)

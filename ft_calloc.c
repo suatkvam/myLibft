@@ -6,18 +6,18 @@
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 21:40:40 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/03 16:15:40 by akivam           ###   ########.fr       */
+/*   Updated: 2025/06/13 09:40:20 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-/* #define malloc(size) NULL
- */ // size parametresini iptal ediyor
 
 void	*ft_calloc(size_t nmemb, size_t size)
-{
+{	
 	void	*ptr;
 
+	if (size != 0 && nmemb > 9223372036854775807 / size)
+		return (NULL);
 	ptr = malloc(nmemb * size);
 	if (!ptr)
 		return (NULL);

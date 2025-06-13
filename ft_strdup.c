@@ -6,7 +6,7 @@
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/01 09:44:56 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/01 09:45:47 by akivam           ###   ########.fr       */
+/*   Updated: 2025/06/13 17:21:15 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s)
 	size_t	i;
 
 	i = 0;
-	ptr = malloc(sizeof(char) * sizeof(s));
+	ptr = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!ptr)
 		return (NULL);
 	while (s[i] != '\0')
