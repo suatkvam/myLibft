@@ -6,7 +6,7 @@
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 20:05:53 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/15 15:26:53 by akivam           ###   ########.fr       */
+/*   Updated: 2025/06/15 15:49:32 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
-
 typedef struct s_split_data
 {
 	char			**res;
@@ -30,6 +24,12 @@ typedef struct s_split_data
 	int				i;
 	int				j;
 }					t_split_data;
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
@@ -53,7 +53,7 @@ void				*ft_memchr(const void *s1, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 char				*ft_strnstr(const char *big, const char *little,
 						size_t len);
-int					ft_atoi(char *nptr);
+int					ft_atoi(const char *nptr);
 void				*ft_calloc(size_t nmemb, size_t size);
 char				*ft_strdup(const char *s);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
