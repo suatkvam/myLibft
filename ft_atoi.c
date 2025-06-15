@@ -6,11 +6,11 @@
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/31 21:33:18 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/13 20:36:52 by akivam           ###   ########.fr       */
+/*   Updated: 2025/06/15 14:31:05 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 int	ft_atoi(char *nptr)
 {

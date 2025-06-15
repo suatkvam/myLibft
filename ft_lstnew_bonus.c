@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/01 09:27:47 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/15 14:31:36 by akivam           ###   ########.fr       */
+/*   Created: 2025/06/15 14:29:24 by akivam            #+#    #+#             */
+/*   Updated: 2025/06/15 14:30:35 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-char	*ft_strchr(const char *s, int c)
+t_list	*ft_lstnew(void *content)
 {
-	char	*str;
-	size_t	i;
+	t_list	*node;
 
-	if (!s)
+	node = (t_list *)malloc(sizeof(t_list));
+	if (node == NULL)
 		return (NULL);
-	str = (char *)s;
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if ((unsigned char)(str[i]) == (unsigned char)c)
-			return (str + i);
-		i++;
-	}
-	if ((unsigned char)c == '\0')
-		return (str + i);
-	return (NULL);
+	node->content = content;
+	node->next = NULL;
+	return (node);
 }
