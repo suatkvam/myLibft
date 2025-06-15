@@ -6,11 +6,11 @@
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/15 14:29:24 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/15 14:30:35 by akivam           ###   ########.fr       */
+/*   Updated: 2025/06/15 15:23:30 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {

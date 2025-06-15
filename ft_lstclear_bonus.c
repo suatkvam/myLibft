@@ -6,11 +6,11 @@
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/15 14:28:37 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/15 14:30:25 by akivam           ###   ########.fr       */
+/*   Updated: 2025/06/15 15:23:18 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
