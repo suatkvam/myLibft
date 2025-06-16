@@ -6,7 +6,7 @@
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 09:41:39 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/13 19:19:49 by akivam           ###   ########.fr       */
+/*   Updated: 2025/06/16 16:51:57 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static char	**ft_allocate_memory(int word_count)
 {
 	char	**res;
 
-	res = malloc(sizeof(char *) * (word_count + 1));
+	res = ft_calloc(word_count + 1, sizeof(char *));
 	if (!res)
 		return (NULL);
 	return (res);
@@ -75,6 +75,8 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	data.word_count = ft_count_word(s, c);
 	data.res = ft_allocate_memory(data.word_count);
+	if (!data.res)
+		return (NULL);
 	while (s[data.i] && data.j < data.word_count)
 	{
 		while (s[data.i] == c)
@@ -82,10 +84,7 @@ char	**ft_split(char const *s, char c)
 		data.word_len = ft_get_word_len(s + data.i, c);
 		data.res[data.j] = ft_substr(s, data.i, data.word_len);
 		if (!data.res[data.j])
-		{
-			ft_split_free(data.res);
-			return (NULL);
-		}
+			return (ft_split_free(data.res), NULL);
 		data.i += data.word_len;
 		data.j++;
 	}
