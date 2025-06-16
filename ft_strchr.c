@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akivam <akivam@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/01 08:55:35 by akivam            #+#    #+#             */
-/*   Updated: 2025/06/16 18:21:14 by akivam           ###   ########.fr       */
+/*   Created: 2025/06/01 09:27:47 by akivam            #+#    #+#             */
+/*   Updated: 2025/06/16 18:22:39 by akivam           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t			i;
-	unsigned char	*tmp_src;
-	unsigned char	*tmp_dst;
+	char	*str;
+	size_t	i;
 
+	str = (char *)s;
 	i = 0;
-	tmp_src = (unsigned char *)src;
-	tmp_dst = dest;
-	if ((tmp_src == NULL && tmp_dst == NULL) && n > 0)
-		return (NULL);
-	while (i < n)
+	while (str[i] != '\0')
 	{
-		tmp_dst[i] = tmp_src[i];
+		if ((unsigned char)(str[i]) == (unsigned char)c)
+			return (str + i);
 		i++;
 	}
-	return (dest);
+	if ((unsigned char)c == '\0')
+		return (str + i);
+	return (NULL);
 }
